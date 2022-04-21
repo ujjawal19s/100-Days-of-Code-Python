@@ -13,10 +13,12 @@ def format_data(account):
 
 #Check user is correct
 def check_answer(guess, a_followers, b_followers):
-  if a_followers > b_followers:
-    return guess == "a"
+  if (guess=="a" and a_followers>b_followers):
+    return True
+  elif (guess=="b" and b_followers>a_followers):
+    return True
   else:
-    return guess == "b"
+    return False
     
 print(logo)
 score  = 0
